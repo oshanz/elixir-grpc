@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  postgres:
+    image: docker.io/postgres:14.0-bullseye
+    environment:
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - learn-elixir-grpc:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+volumes:
+  learn-elixir-grpc:
